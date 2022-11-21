@@ -1,6 +1,9 @@
 <img src="webCommodore.png"
      alt="Web Commodore"
-     style="max-width:60%; max-height:60%;" />
+     style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;" />
 
 # WebCommodore
 A web scraper and automation tool for getting data and creating an API to consume it.
