@@ -12,7 +12,7 @@ var htmlView;
 
 async function main(){
 
-var url = 'https://reddit.com/';
+var url = 'https://www.domain.com.au/liveable-sydney/';
 
 
 
@@ -38,6 +38,8 @@ virtualConsole.on('jsdomError', (error) => {
     for (let link of links) {
         urls.push(link.innerHTML);
     }
+
+    console.log(`urls ${urls}`);
 
 
 
@@ -129,7 +131,7 @@ vDOM.window.document.querySelector('body').appendChild(script);
 
     htmlView = vDOM.serialize();
 
-    console.log("HTML VIEW ", htmlView);
+    //console.log("HTML VIEW ", htmlView);
 
  //  console.log("VDOM ", vDOM);
 
@@ -145,7 +147,6 @@ main();
 
 const app = express();
 const port = process.env.PORT || 8080;
-
 
 var virtualDOMUI = `
 <div id="virtualDOM">
@@ -208,4 +209,13 @@ app.get('/', function(req, res, next) {
 app.get('/ui', function(req, res, next) {
     console.log("SENDING UI",req,res,next);
     res.send(virtualDOMUI);
+
 })
+
+
+app.get('/domain', function(req, res, next) {
+    console.log("SENDING UI",req,res,next);
+    res.send({ok:true});
+})
+
+
