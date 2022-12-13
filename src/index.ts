@@ -12,7 +12,7 @@ var htmlView;
 
 async function main(){
 
-var url = 'https://domain.com.au/';
+var url = 'https://www.domain.com.au/liveable-sydney/';
 
 
 
@@ -38,6 +38,8 @@ virtualConsole.on('jsdomError', (error) => {
     for (let link of links) {
         urls.push(link.innerHTML);
     }
+
+    console.log(`urls ${urls}`);
 
 
 
@@ -129,7 +131,7 @@ vDOM.window.document.querySelector('body').appendChild(script);
 
     htmlView = vDOM.serialize();
 
-    console.log("HTML VIEW ", htmlView);
+    //console.log("HTML VIEW ", htmlView);
 
  //  console.log("VDOM ", vDOM);
 
