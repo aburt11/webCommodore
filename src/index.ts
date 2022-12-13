@@ -12,7 +12,7 @@ var htmlView;
 
 async function main(){
 
-var url = 'https://reddit.com/';
+var url = 'https://domain.com.au/';
 
 
 
@@ -145,7 +145,6 @@ main();
 
 const app = express();
 const port = process.env.PORT || 8080;
-
 
 var virtualDOMUI = `
 <div id="virtualDOM">
