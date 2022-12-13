@@ -209,4 +209,13 @@ app.get('/', function(req, res, next) {
 app.get('/ui', function(req, res, next) {
     console.log("SENDING UI",req,res,next);
     res.send(virtualDOMUI);
+
 })
+
+
+app.get('/domain', function(req, res, next) {
+    console.log("SENDING UI",req,res,next);
+    res.send({ok:true});
+})
+
+
